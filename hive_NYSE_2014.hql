@@ -14,7 +14,8 @@ STORED AS TEXTFILE;
 
 hadoop fs -copyFromLocal '/home/dpsashanka/data/nyse_2014.csv' '/user/dpsashanka/data'
 
-LOAD DATA LOCAL INPATH '/user/dpsashanka/data/nyse_2014.csv' overwrite into TABLE nyse_2014;
+LOAD DATA LOCAL INPATH '/home/dpsashanka/data/nyse_2014.csv' overwrite into TABLE nyse_2014;
+LOAD DATA LOCAL INPATH '/home/dpsashanka/data/nyse_2009.csv' overwrite into TABLE nyse_2014;
 
 /* total number of records present*/
 SELECT count(*) from nyse_2014; -------->>>>>>  145126 row(s)
